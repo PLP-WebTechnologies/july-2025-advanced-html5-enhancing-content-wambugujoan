@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KCA University Student Registration</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f7f9; color: #333; }
+    header, main, footer { max-width: 800px; margin: auto; padding: 20px; }
+    header { background: #009f3d; color: white; text-align: center; border-radius: 0 0 8px 8px; }
+    section { background: white; padding: 20px; margin: 20px 0; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; }
+    ul { padding-left: 20px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    fieldset { margin: 15px 0; border: 1px solid #ccc; padding: 15px; border-radius: 5px; }
+    legend { font-weight: bold; }
+    label { display: block; margin-top: 8px; }
+    input, select, textarea, button { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #bbb; border-radius: 4px; box-sizing: border-box; }
+    button { background: #009f7d; color: white; cursor: pointer; }
+    button:hover { background: #003f7d; }
+    img, video { max-width: 100%; display: block; margin-bottom: 10px; border-radius: 4px; }
+    footer { text-align: center; font-size: 0.9em; color: #666; margin-top: 40px; }
+    audio { width: 100%; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>KCA University Student Registration</h1>
+  <p>Welcome to the official student registration form</p>
+</header>
+
+<main>
+  <!-- About KCA University -->
+  <section>
+    <h2>About KCA University</h2>
+    <p>KCA University is a pioneering institution in ICT-driven education in Kenya.</p>
+    <ul>
+      <li>Founded in 1978</li>
+      <li>Specializing in ICT, Business, and Leadership</li>
+      <li>Multiple campuses across Kenya</li>
+    </ul>
+    <img src="KCA Image.PNG" alt="KCA University Campus">
+
+    <!-- Video & Audio Section -->
+    <h3>Campus Tour Video</h3>
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h3>University Anthem</h3>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.ogg" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Office Hours Table -->
+  <section>
+    <h2>Office Hours & Contact</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Campus</th>
+          <th>Office Hours</th>
+          <th>Contact Email</th>
+          <th>Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Survey (Main)</td>
+          <td>8:00 AM – 5:00 PM</td>
+          <td>info@kca.ac.ke</td>
+          <td>0712345678</td>
+        </tr>
+        <tr>
+          <td>Town Campus</td>
+          <td>9:00 AM – 4:00 PM</td>
+          <td>towncampus@kca.ac.ke</td>
+          <td>0987654378</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Registration Form -->
+  <section>
+    <h2>New Student Registration Form</h2>
+    <form action="#" method="POST" autocomplete="on">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Full name" required minlength="3">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="studentemail@example.com" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g., 0712345678" pattern="\d{10}" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Academic Information</legend>
+        <label for="student-id">Student ID:</label>
+        <input type="text" id="student-id" name="student-id" value="KCA2025XXX" readonly>
+
+        <label for="program">Select Program:</label>
+        <select id="program" name="program" required>
+          <option value="">--Choose Program--</option>
+          <option value="bscict">BIT</option>
+          <option value="bba">BBIT</option>
+          <option value="bcompta">B.Com.(Accounting)</option>
+        </select>
+
+        <label for="admission-year">Admission Year:</label>
+        <input type="number" id="admission-year" name="admission-year" min="2022" max="2025" value="2025" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Address & Next of Kin</legend>
+        <label for="address">Home Address:</label>
+        <textarea id="address" name="address" placeholder="123 University Road, Nairobi" rows="3" required></textarea>
+
+        <label for="nok-name">Next of Kin Name:</label>
+        <input type="text" id="nok-name" name="nok-name" placeholder="Next of Kin" required>
+
+        <label for="nok-phone">Next of Kin Phone:</label>
+        <input type="tel" id="nok-phone" name="nok-phone" placeholder="e.g., 0722345678" pattern="\d{10}" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Submit Documents</legend>
+        <label for="id-upload">Upload National ID / Passport:</label>
+        <input type="file" id="id-upload" name="id-upload" accept=".pdf,.jpg,.png" required>
+
+        <label for="photo-upload">Upload Passport Photo:</label>
+        <input type="file" id="photo-upload" name="photo-upload" accept=".jpg,.png" required>
+      </fieldset>
+
+      <button type="submit">Submit Registration</button>
+      <button type="reset">Reset Form</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 KCA University - Registration Portal
+</footer>
+
+</body>
+</html>
+
+
